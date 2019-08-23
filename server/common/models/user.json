@@ -1,0 +1,44 @@
+{
+  "name": "user",
+  "base": "User",
+  "idInjection": true,
+  "restrictResetPasswordTokenScope": true,
+  "emailVerificationRequired": false,
+  "properties": {
+    "teamName": {
+      "type": "string",
+      "required": true
+    },
+    "useOfType": {
+      "type": "string",
+      "required": true
+    },
+    "peopleCollaborate": {
+      "type": "string",
+      "required": true
+    },
+    "thingToManage": {
+      "type": "string",
+      "required": true
+    },
+    "teamDomain": {
+      "type": "string",
+      "required": true
+    },
+    "termsCond": {
+      "type": "boolean",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}
